@@ -12,7 +12,7 @@ public class Table{
         return title;
     }
 
-    @Override
+
     public String toString() {
         return "Table{" +
                 "title='" + title + '\'' +

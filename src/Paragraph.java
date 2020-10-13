@@ -4,7 +4,7 @@ public class Paragraph{
         this.text=text;
     }
 
-    @Override
+
     public String toString() {
         return "Paragraph{" +
                 "text='" + text + '\'' +

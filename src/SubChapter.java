@@ -18,7 +18,7 @@ public class SubChapter {
         this.name = name;
     }
 
-    @Override
+
     public String toString() {
         return "SubChapter{" +
                 "name=" + name +

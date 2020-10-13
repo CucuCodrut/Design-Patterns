@@ -3,12 +3,11 @@ import java.util.*;
 public class Book {
     public String title;
     private TableOfContents tableOfContents;
-    private List <Author> authors=new ArrayList<>();
+    private ArrayList <Author> authors=new ArrayList<>();
     public ArrayList <Chapter> chapters=new ArrayList<Chapter>();
     public Book(String title){
         this.title=title;
     }
-    @Override
     public String toString() {
         return "Book{" +
                 "title=" + title +
@@ -25,7 +24,7 @@ public class Book {
         return chapters.indexOf(sub);
     }
 
-    public List<Chapter> getChapters() {
+    public ArrayList<Chapter> getChapters() {
         return chapters;
     }
 

@@ -17,7 +17,7 @@ public class Image {
         this.imageName = imageName;
     }
 
-    @Override
+
     public String toString() {
         return "Image{" +
                 "imageName=" + imageName +
