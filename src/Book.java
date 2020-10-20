@@ -1,45 +1,39 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class Book {
-    public String title;
-    private TableOfContents tableOfContents;
-    private ArrayList <Author> authors=new ArrayList<>();
-    public ArrayList <Chapter> chapters=new ArrayList<Chapter>();
-    public Book(String title){
+    private String title;
+
+    private ArrayList<Element> content = new ArrayList<>();
+    private ArrayList<Author> authors = new ArrayList<>();
+
+    Book(String title){
         this.title=title;
     }
-    public String toString() {
-        return "Book{" +
-                "title=" + title +
-                '}';
+
+   public void addContent (Element element){
+        content.add(element);
+   }
+
+    public void addAuthor(Author author){
+        authors.add(author);
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public int createChapter(String s) {
-        Chapter sub=new Chapter(s);
-        chapters.add(sub);
-        return chapters.indexOf(sub);
-    }
-
-    public ArrayList<Chapter> getChapters() {
-        return chapters;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
     public void print(){
-        System.out.println(this.title);
+        System.out.println("Book name: " + this.title);
+        printAuthors();
+        for (Element element:content){
+            element.printElement();
+        }
+
+
     }
 
-    public void addAuthor(Author rpGheo) {
-        authors.add(rpGheo);
+    private void printAuthors(){
+        for(Author i: authors)
+        {
+            i.print();
+        }
     }
 
-    public Chapter getChapter(int indexChapterOne) {
-        return chapters.get(indexChapterOne);
-    }
+
 }
