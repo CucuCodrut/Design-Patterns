@@ -15,10 +15,7 @@ public class Section implements Element {
         content.add(element);
 
     }
-    public  Element getElement(int index){
-        return content.get(index);
 
-    }
 
     public void printElement(){
         System.out.println(sectionTitle);
